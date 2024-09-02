@@ -1,0 +1,17 @@
+Enunciado: Sistema de Biblioteca
+
+O objetivo deste projeto é desenvolver um sistema básico de gerenciamento de biblioteca utilizando um banco de dados relacional. O sistema deve ser capaz de armazenar informações sobre autores, livros e empréstimos de livros. O banco de dados deve permitir a inserção, atualização e exclusão de registros, bem como a execução de consultas para listar informações relevantes.
+
+Requisitos:
+
+Banco de Dados: Criar um banco de dados chamado Biblioteca.
+Tabelas:
+Autores: Deve armazenar informações sobre autores, incluindo ID, nome e nacionalidade.
+Livros: Deve armazenar informações sobre livros, incluindo ID, título, ano de publicação, gênero e o autor associado.
+Empréstimos: Deve registrar informações sobre empréstimos de livros, incluindo ID, livro emprestado, datas de empréstimo e devolução, e o nome do usuário que realizou o empréstimo.
+Operações:
+Inserir dados nas tabelas.
+Consultar todos os livros e seus respectivos autores.
+Consultar todos os empréstimos que ainda estão em aberto.
+Atualizar a data de devolução de um empréstimo.
+Remover um livro e seus empréstimos associados.
