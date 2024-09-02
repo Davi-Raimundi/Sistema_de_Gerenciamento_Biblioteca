@@ -1,0 +1,32 @@
+# Arquivos de banco de dados locais
+*.sql
+*.db
+*.sqlite
+
+# Arquivos de configuração local
+*.env
+*.local
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Sistema de build
+/build
+/dist
+
+# Diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Outras possíveis inclusões
+*.class
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.tar.bz2
