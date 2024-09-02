@@ -1,0 +1,54 @@
+# Sistema de Biblioteca
+
+Este projeto é um sistema básico de gerenciamento de biblioteca utilizando um banco de dados relacional MySQL. O sistema gerencia informações sobre autores, livros e empréstimos de livros.
+
+## Requisitos
+
+- MySQL ou MariaDB para execução do script SQL.
+- Conhecimento básico de SQL para interagir com o banco de dados.
+
+## Estrutura do Banco de Dados
+
+O banco de dados `Biblioteca` é composto pelas seguintes tabelas:
+
+1. **Autores**
+   - `AutorID` (INT, AUTO_INCREMENT, PRIMARY KEY)
+   - `Nome` (VARCHAR(100), NOT NULL)
+   - `Nacionalidade` (VARCHAR(100))
+
+2. **Livros**
+   - `LivroID` (INT, AUTO_INCREMENT, PRIMARY KEY)
+   - `Titulo` (VARCHAR(255), NOT NULL)
+   - `AutorID` (INT, FOREIGN KEY referenciando `Autores(AutorID)`)
+   - `AnoPublicacao` (YEAR)
+   - `Genero` (VARCHAR(50))
+
+3. **Emprestimos**
+   - `EmprestimoID` (INT, AUTO_INCREMENT, PRIMARY KEY)
+   - `LivroID` (INT, FOREIGN KEY referenciando `Livros(LivroID)`)
+   - `DataEmprestimo` (DATE, NOT NULL)
+   - `DataDevolucao` (DATE)
+   - `NomeUsuario` (VARCHAR(100), NOT NULL)
+
+## Operações
+
+1. **Criação do Banco de Dados e Tabelas**: Execute o script SQL fornecido para criar as tabelas e definir os relacionamentos.
+2. **Inserção de Dados**: O script inclui exemplos de inserção de dados para autores, livros e empréstimos.
+3. **Consultas**:
+   - Liste todos os livros e seus autores.
+   - Liste todos os empréstimos que estão em aberto.
+4. **Atualização de Dados**: Atualize a data de devolução de um empréstimo específico.
+5. **Exclusão de Dados**: Remova um livro e seus empréstimos associados.
+
+## Como Executar
+
+1. **Importe o Script**: Importe o script SQL no seu ambiente MySQL.
+2. **Execute Consultas e Operações**: Utilize um cliente MySQL para executar as consultas e operações desejadas.
+
+## Contribuição
+
+Sinta-se à vontade para fazer sugestões de melhorias ou correções. Para contribuir, faça um fork do repositório e envie um pull request com suas alterações.
+
+## Licença
+
+Este projeto é licenciado sob a [MIT License](LICENSE).
